@@ -13,6 +13,7 @@
       type="checkbox"
       [checked]="itemForm.value.isAcquired"
       formControlName="isAcquired"
+      (change)="onChange()"
     />
   </div>
 </form>

@@ -1,0 +1,5 @@
+<section class="overview-wrapper" *ngIf="vm$ | async as vm">
+  <p class="num-items">Total Items: {{ vm.numItems }}</p>
+  <p class="num-acquired"># Items Acquired: {{ vm.numAcquired }}</p>
+  <p class="num-remaining"># Items Remaining: {{ vm.numRemaining }}</p>
+</section>
