@@ -1,1 +1,10 @@
-<p>add-list-item works!</p>
+<form [formGroup]="addNewItemForm" (onSubmit)="addNewListItem()">
+  <div class="list-item">
+    <input
+      type="text"
+      formControlName="name"
+      (keydown.enter)="addNewListItem()"
+    />
+    <button class="submit-btn" type="submit">Add Item</button>
+  </div>
+</form>
