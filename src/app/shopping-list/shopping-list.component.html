@@ -1,0 +1,9 @@
+<div class="list-wrapper">
+  <section class="list-section" *ngIf="shoppingList$ | async as list">
+    <app-list-item
+      *ngFor="let item of list;"
+      [listItem]="item"
+      (itemUpdate)="onItemUpdate($event, list)">
+    </app-list-item>
+  </section>
+</div>

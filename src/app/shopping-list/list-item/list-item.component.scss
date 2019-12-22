@@ -1,0 +1,13 @@
+.list-item {
+  display: flex;
+  flex: direction;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 1px solid #BBDEFB;
+
+  .item-name {
+    margin: 0;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,18 @@
+<form [formGroup]="itemForm" *ngIf="itemForm">
+  <div class="list-item">
+    <p
+      aria-label="Click to edit"
+      *ngIf="!isEditable"
+      [ngClass]="{ 'crossed-out': itemForm.value.isAcquired }"
+      class="item-name"
+      (click)="isEditable = true">
+      {{ itemForm.value.name }}
+    </p>
+    <input type="text" *ngIf="isEditable" formControlName="name" (keydown.enter)="onKeydown($event.target.value)">
+    <input
+      type="checkbox"
+      [checked]="itemForm.value.isAcquired"
+      formControlName="isAcquired"
+    />
+  </div>
+</form>
